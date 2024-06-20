@@ -1,0 +1,9 @@
+services:
+  fact_api:
+    image: fact_api
+    ports:
+      - 8000:80
+  print_facts:
+    image: print-facts
+    environment:
+      - BASE_URL=http://fact_api
